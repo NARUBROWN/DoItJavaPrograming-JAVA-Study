@@ -1,5 +1,5 @@
 //접근 제어자 public 을 선언한 Variable 클래스
-public class Variable {
+public class day1 {
 
     // 메인메소드 선언
     // 접근 제어자 public, 정적 함수라는 것을 명시 static,
@@ -53,13 +53,93 @@ public class Variable {
         int in4 = (int)lo2;
         System.out.println(in4);
 
-
-        // 관계 연산자
-        // true, false로 반환 됨
-
         // 논리 연산자
+        // 논리 곱 && 두 합이 참인 경우에만 깂과 값이 참
+        boolean var1 = (5 > 3) && (5 > 2);
+        System.out.println(var1);
+        // 논리 합 || 두 합 중 하나만 참이여도 결과 값이 참
+        boolean var2 = (5 > 3) || (5 < 2);
+        System.out.println(var2);
+        // 부정 ! 참인 경우에는 거짓으로 바꾸고 거짓인 경우에는 참으로 바뀜
+        boolean var3 = !(4 > 2);
 
-        // 복합대입 연산자
+        // 복합대입 연산자 (비트 연산자 제외)
+        // += 두합의 값을 더해서 왼쪽 항에 대입
+        // -= 왼쪽 항에서 오른쪽 항을 빼서 그 값을 왼쪽 항에 대입
+        // *= 두 항의 값을 곱해서 왼쪽 항에 대입
+        // /= 왼쪽 항을 오른쪽 항으로 나누어 그 몫을 왼쪽 항에 대입
+        // %= 왼쪽 항을 오른쪽 항으로 나누어 그 나머지를 왼쪽항에 대입
+
+
+        // 조건 연산자 (삼항 연산자)
+        // 조건식 ? 결과1 : 결과 2의 형태
+        //         조건식  ? 결과1 : 결과2
+        int num = (5 > 3) ? 10 : 20;
+        System.out.println(num);
+
+        // 조건문
+        // if else 문
+        int age = 10;
+        if (age >= 8) {
+            System.out.println("학교에 다닙니다.");
+        } else {
+            System.out.println("학교에 다니지 않습니다.");
+        }
+        // else if 문
+        if (age >= 8) {
+            System.out.println("학교에 다닙니다.");
+        } else if (age >= 15 && age <= 20){
+            System.out.println("중학교나 고등학교에 다닙니다.");
+        } else {
+            System.out.println("그 외의 상황 입니다.");
+        }
+        // switch - case 문
+        var rank = 2;
+        var medalColor = "";
+
+        switch(rank) {
+            case 1 :
+                medalColor = "G";
+                break;
+            case 2 :
+                medalColor = "S";
+                break;
+            case 3 :
+                medalColor = "B";
+                break;
+            case 4 :
+                System.out.println("탈락");
+                break;
+        }
+        System.out.println(medalColor);
+
+
+        // 반복문
+        // while 문
+        int num1 = 1;
+        int sum = 0;
+
+        while (num1 <= 10) {
+            sum += num;
+            num1++;
+        }
+        System.out.println(sum);
+        // do while 문
+        // do-while 은 do 만의 문장을 무조건 먼저 수행한 후에 검사한다.
+        do {
+            sum += num;
+            num1++;
+        } while (num1 <= 10);
+        System.out.println(sum);
+
+        // for 문
+        int i;
+        int sum1 = 0;
+        for (i = 1; i <= 10; i++) {
+            sum1 += i;
+        }
+        System.out.println("FOR문 " + sum1);
+
 
     }
 }
